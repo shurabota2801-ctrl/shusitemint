@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
-    ],
+    ]
 }
 
 MIDDLEWARE = [
@@ -62,9 +62,13 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5501",  # Текущий порт Live Server
+    "http://localhost:5501",  # И локальная версия
     "http://localhost:8000",
-    "http://127.0.0.1:5500",
+    "http://127.0.0.1:8000",
 ]
+
+CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'core.urls'
 

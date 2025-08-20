@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мои Заметки</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Мои Заметки</h1>
+            <button onclick="logout()" class="logout-btn">Выйти</button>
+        </header>
+
+        <div class="note-form">
+            <h2>Новая заметка</h2>
+            <input type="text" id="note-title" placeholder="Заголовок">
+            <textarea id="note-content" placeholder="Содержание"></textarea>
+            <button onclick="createNote()">Создать</button>
+        </div>
+
+        <div class="notes-list">
+            <h2>Мои заметки</h2>
+            <div id="notes-container"></div>
+        </div>
+    </div>
+    <script src="js/notes.js"></script>
+    <div id="editModal" class="modal">
+    <div class="modal-content">
+        <h2>Редактировать заметку</h2>
+        <input type="text" id="edit-note-title" placeholder="Заголовок">
+        <textarea id="edit-note-content" placeholder="Содержание"></textarea>
+        <input type="hidden" id="edit-note-id">
+        <button onclick="updateNote()">Сохранить</button>
+        <button onclick="closeEditModal()" class="cancel-btn">Отмена</button>
+    </div>
+</div>
+</body>
+</html>
