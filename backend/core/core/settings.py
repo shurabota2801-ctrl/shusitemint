@@ -62,8 +62,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:5501",  # Текущий порт Live Server
-    "http://localhost:5501",  # И локальная версия
+    "http://127.0.0.1:5500",  # Текущий порт Live Server
+    "http://localhost:5500",  # И локальная версия
     "http://localhost:8000",
     "http://127.0.0.1:8000",
 ]
